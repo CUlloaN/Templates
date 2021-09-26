@@ -1,0 +1,43 @@
+% Beamer presentation Template
+% Author: Carlos F. Ulloa Nova
+% Last Update: Sept 25, 2021
+% Lastest Version: https://github.com/CUlloaN/Templates
+
+\documentclass[10pt,aspectratio=169]{beamer}
+\input{Preamble.tex}
+
+\title{Title of presentation}
+\subtitle{Subtitle of presentation}
+
+\author[Author 1]{\correspond{Author 1}\inst{1} \and Author 2\inst{1,2} \and Author 3\inst{1,2,3}}
+
+\institute[University B]{\inst{1}University A \and \inst{2}University B \and \inst{3}University C}
+\date{\today}
+
+\titlegraphic{\includegraphics[width=0.5\textwidth]{figures/Jornada}}
+
+% Reference
+\addbibresource{bibfile.bib}
+
+% ---------------------------------------------------------------------------- %
+\begin{document}
+	\begin{frame}[plain]
+		\titlepage
+	\end{frame}
+
+% ---------------------------------------------------------------------------- %
+	\input{body_frames.tex}
+	
+% ---------------------------------------------------------------------------- %
+	\begin{frame}[plain]
+		\titlepage
+	\end{frame}
+
+	\begin{frame}[t,allowframebreaks]{\bibname}
+		\printbibliography%[sorting=nyt]
+	\end{frame}
+
+% ---------------------------------------------------------------------------- %
+%	\input{appendix_frames.tex}
+
+\end{document}

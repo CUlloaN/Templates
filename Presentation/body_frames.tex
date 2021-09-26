@@ -1,0 +1,82 @@
+\begin{frame}{}
+	\tableofcontents
+\end{frame}
+
+\section{Section example}
+\begin{frame}{Frame title}{Frame subtitle}
+	This is the general template for presentations
+	\begin{theorem}
+		There is no largest prime number.
+	\end{theorem}
+	\begin{proof}
+		\begin{enumerate}
+			\item<1-> Suppose $p$ were the largest prime number.
+			\item<2-> Let $q$ be the product of the first $p$ numbers.
+			\item<3-> Then $q + 1$ is not divisible by any of them.
+			\item<4-> But $q + 1$ is greater than $1$, thus divisible by some 
+			prime number not in the first $p$ numbers.\qedhere
+		\end{enumerate}
+	\end{proof}
+	\uncover<4->{The proof used \textit{reductio ad absurdum}.}
+\end{frame}
+
+
+
+\section{Texto2}
+\begin{frame}{Figures}
+	\begin{block}{Observation 1}
+		Simmons Hall is composed of metal and concrete.
+	\end{block}
+	\begin{exampleblock}{Observation 2}
+		Simmons Dormitory is composed of brick.
+	\end{exampleblock}
+	\begin{alertblock}{Conclusion}
+		Simmons Hall $\not=$ Simmons Dormitory.
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}{Figures}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.3\linewidth]{figures/eulerang.pdf}
+		\caption{Example of figure}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Tables}
+	\begin{table}
+		\centering
+		\caption{Results of CLT buckling test, obtained from 
+		\textcite{pinaNumericalStudyElastic2019} }
+		\begin{tabular}{c
+						S[table-format=3.0]
+						S[table-format=2.0]
+						S[table-format=4.0]
+						S[table-format=2.2]
+						S[table-format=3.1]
+						S[table-format=3.2]
+						S[table-format=2.2]}
+			\toprule
+			{\multirow{2}{*}{\makecell{Test\\number}}}
+			& {\multirow{2}{*}{\makecell{Width\\/\si{\milli\meter}}}} 
+			& {\multirow{2}{*}{\makecell{Total thickness\\/\si{\milli\meter}}}}
+			& {\multirow{2}{*}{\makecell{Height\\/\si{\milli\meter}}}}
+			& {\multirow{2}{*}{\makecell{$E$\\/\si{\giga\pascal}}}}
+			& {\multirow{2}{*}{\makecell{$\lambda_{eff}$}}}
+			& {\multirow{2}{*}{\makecell{Critical load\\/\si{\kilo\newton}}}}
+			& {\multirow{2}{*}{\makecell{Critical stress\\/\si{\mega\pascal}}}} 
+			\\
+			&&&&&&&\\\midrule
+			1.a   & 150   & 45    & 1000  & 11.65 & 87.8  & 71.85 & 10.64 \\
+			1.b   & 150   & 45    & 1000  & 11.65 & 87.8  & 95.31 & 14.12 \\
+			2.a   & 150   & 45    & 1980  & 11.65 & 164.6 & 35.76 & 5.3 \\
+			2.b   & 150   & 45    & 1990  & 11.65 & 164.6 & 21.12 & 3.13 \\
+			3.a   & 150   & 90    & 2000  & 11.29 & 83.1  & 210.14 & 15.57 \\
+			3.b   & 150   & 90    & 2000  & 11.29 & 83.1  & 129.24 & 9.57 \\
+			3.c   & 150   & 90    & 2000  & 11.29 & 83.1  & 168.98 & 12.52 \\
+			3.d   & 150   & 90    & 2000  & 11.29 & 83.1  & 194.89 & 14.44 
+			\\\bottomrule
+		\end{tabular}%
+		\label{tab:CLTresults}%
+	\end{table}%
+\end{frame}

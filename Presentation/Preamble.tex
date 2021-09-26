@@ -1,0 +1,161 @@
+%------------------------------------------------------------------------------%
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amssymb,amstext,amsmath,mathtools}
+\usepackage{textcomp}
+\usepackage{bm,bbm}
+
+\usepackage{csquotes}
+
+\usepackage{siunitx}
+\sisetup{input-decimal-markers={.},group-separator={\,}}
+
+%------------------------------------------------------------------------------%
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\DeclareGraphicsExtensions{.pdf,PDF,.png,PNG,.jpg,JPG}
+\usepackage{subcaption}
+\setlength\belowcaptionskip{1pt}
+\setlength\abovecaptionskip{1pt}
+
+%------------------------------------------------------------------------------%
+\usepackage{multicol,multirow}
+\usepackage{booktabs}
+\usepackage{makecell,tabularx}
+
+%------------------------------------------------------------------------------%
+\usepackage[backend=biber,
+			style=authoryear,
+			natbib=false,
+			date=year,
+			doi=false,
+			isbn=false,
+			url=false,
+			sorting=nyt,
+			giveninits=true, % Abbreviates names
+			uniquename=init, % Option compatible with firstinits/giveninits
+			maxbibnames=15,  % Max # of author per citation in the bibliography
+			maxcitenames=2,  % Max # of author per citation in the text
+			dashed=false,    % false: Get full name twice in Bibliography
+			]{biblatex}
+\renewcommand*{\bibfont}{\scriptsize}
+
+% ---------------------------------------------------------------------------- %
+\newcommand{\correspond}[1]{\texorpdfstring{\underline{\textbf{#1}}}{#1}}
+
+% ---------------------------------------------------------------------------- %
+\usepackage{xcolor}
+\definecolor{UsachNaranjo}{RGB}{234,118,0}
+\definecolor{UsachGris}{RGB}{117,117,117}
+\definecolor{UsachAzul}{RGB}{0,47,108}
+
+% ---------------------------------------------------------------------------- %
+% ---------------------------------------------------------------------------- %
+\usepackage{eso-pic}
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamertemplate{background canvas}{%
+	\AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{plantilla_usach_ppt.pdf}}
+}
+
+% ---------------------------------------------------------------------------- %
+\setbeamercolor{title}{fg=UsachAzul}
+\setbeamerfont{title}{series=\bfseries}
+
+\setbeamercolor{subtitle}{fg=UsachNaranjo}
+\setbeamerfont{subtitle}{size=\large,series=\normalfont}
+
+\setbeamercolor{author}{fg=UsachAzul}
+\setbeamerfont{author}{size=\normalsize,series=\normalfont}
+
+\setbeamercolor{institute}{fg=UsachAzul}
+\setbeamerfont{institute}{size=\footnotesize,series=\normalfont}
+\makeatletter
+	\def\beamer@andinst{\\[3pt]}
+\makeatother
+
+\setbeamercolor{date}{fg=UsachAzul}
+\setbeamerfont{date}{size=\footnotesize,series=\normalfont}
+
+\setbeamertemplate{title page}{
+	\AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{titletemplate.pdf}}
+	\begin{center}
+		\usebeamercolor[fg]{title}\usebeamerfont{title}
+		\inserttitle
+		\ifx\insertsubtitle\@empty
+		\else
+			\vskip3pt
+			\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}
+			\insertsubtitle
+		\fi
+		%
+		\ifx\insertauthor\@empty
+		\else
+			\usebeamerfont{author}\usebeamercolor[fg]{author}
+			\vfill
+			\insertauthor
+		\fi
+		%
+		\ifx\insertinstitute\@empty
+		\else
+			\usebeamerfont{institute}\usebeamercolor[fg]{institute} 
+			\vfill
+			\insertinstitute
+		\fi
+		%
+		\ifx\insertdate\@empty
+		\else
+			\usebeamerfont{date}\usebeamercolor[fg]{date}
+			\vfill
+			\insertdate
+		\fi
+		%
+		\ifx\inserttitlegraphic\@empty
+		\else
+			\vfill
+			\inserttitlegraphic
+		\fi
+	\end{center}
+}
+
+% ---------------------------------------------------------------------------- %
+\setbeamercolor{frametitle}{fg=UsachAzul}
+\setbeamercolor{framesubtitle}{fg=UsachNaranjo}
+\setbeamerfont{framesubtitle}{size=\fontsize{10}{12}}
+
+\makeatletter
+	\setbeamertemplate{frametitle}{
+		\ifx\insertframesubtitle\@empty
+			\setbeamerfont{frametitle}{size=\fontsize{18}{0}}
+			\usebeamerfont{frametitle}\usebeamercolor[fg]{frametitle}
+			\vspace*{15pt}\hspace*{23mm}\insertframetitle\\
+		\else
+			\setbeamerfont{frametitle}{size=\fontsize{14}{0}}
+			\usebeamerfont{frametitle}\usebeamercolor[fg]{frametitle}
+			\vspace*{15pt}\hspace*{23mm}\insertframetitle\\
+			\usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}
+			\vspace*{-1pt}\hspace*{23mm}\insertframesubtitle\vspace*{-8pt}
+		\fi
+	}
+\makeatother
+
+% ---------------------------------------------------------------------------- %
+\setbeamercolor{footline}{fg=UsachAzul}
+\setbeamerfont{footline}{size=\footnotesize}
+\makeatletter
+\setbeamertemplate{footline}{
+	\usebeamercolor{footline}\usebeamerfont{footline}
+	\begin{flushright}%
+		\insertframenumber/\inserttotalframenumber$\quad$
+	\end{flushright}%
+}
+\makeatother
+
+% ---------------------------------------------------------------------------- %
+\setbeamercolor{block title}{use=structure,fg=white,bg=UsachAzul!85}
+\setbeamercolor{block title example}{use=structure,fg=white,bg=UsachNaranjo!85}
+\setbeamercolor{block title alerted}{use=structure,fg=white,bg=UsachGris!85}
+\setbeamertemplate{blocks}[rounded][shadow]
+
+% ---------------------------------------------------------------------------- %
+\setbeamertemplate{itemize items}[circle]
