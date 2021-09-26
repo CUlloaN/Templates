@@ -1,9 +1,10 @@
+% ---------------------------------------------------------------------------- %
 \usepackage[right   = 20mm,
-            left    = 25mm,
-            top     = 20mm,
-            bottom  = 23mm,
-            headsep = 0em,
-            footskip= 2.5em,
+			left    = 25mm,
+			top     = 20mm,
+			bottom  = 23mm,
+			headsep = 0em,
+			footskip= 2.5em,
 			headheight = 0em,
 			nomarginpar]{geometry}
 
@@ -24,7 +25,7 @@
 \usepackage{enumitem}
 \setlist{nosep}
 
-\usepackage{xcolor}
+% ---------------------------------------------------------------------------- %
 \usepackage{graphicx}
 \graphicspath{{figures/}} 
 \usepackage[labelfont=bf,justification=raggedright,singlelinecheck=false,font=small]{caption}
@@ -33,31 +34,32 @@
 \captionsetup[figure]{name=Fig.,labelsep=period,subrefformat=parens}
 \captionsetup[table]{labelsep=newline,skip=0.5em}
 
+% ---------------------------------------------------------------------------- %
 \usepackage{multicol}
 \setlength{\columnsep}{1cm}
 \usepackage{booktabs}
 \usepackage{makecell,multirow}
 \usepackage{tabularx}
 
-\usepackage{fontawesome5}
-
+% ---------------------------------------------------------------------------- %
 \usepackage[backend=bibtex,
-            style=authoryear,
-            natbib=true,
-        	doi=true,
-        	date=year,
-        	isbn=false,
-        	url=false,
-        	sorting=nyt,
-        	giveninits=true,
-        	uniquename=false,
-        	maxbibnames=15,
-        	maxcitenames=2,
-        	dashed=false,
-            ]{biblatex}
+			style=authoryear,
+			natbib=true,
+			doi=true,
+			date=year,
+			isbn=false,
+			url=false,
+			sorting=nyt,
+			giveninits=true,
+			uniquename=false,
+			maxbibnames=15,
+			maxcitenames=2,
+			dashed=false,
+			]{biblatex}
 \bibliography{bibfile}
 \renewcommand*{\bibfont}{\footnotesize}
 
+% ---------------------------------------------------------------------------- %
 \usepackage[linktocpage]{hyperref}
 \usepackage{cleveref}
 \hypersetup{colorlinks=true,
@@ -69,20 +71,22 @@
 
 \def\doubleunderline#1{\underline{\underline{#1}}}
 
+% ---------------------------------------------------------------------------- %
+% ---------------------------------------------------------------------------- %
 \renewenvironment{abstract}
-	{\quotation\small\noindent\rule{\linewidth}{.5pt}\par\smallskip
+{\quotation\small\noindent\rule{\linewidth}{.5pt}\par\smallskip
 	{\centering\bfseries\abstractname\par}\medskip}
-	{\par\noindent\rule{\linewidth}{.5pt}\endquotation}
-
+{\par\noindent\rule{\linewidth}{.5pt}\endquotation}
 
 \usepackage{nomencl}
 \usepackage{framed}
 \setlength{\nomitemsep}{-\parsep} % Baseline skip between items
 \renewcommand*\nompreamble{\begin{multicols}{2}}
-\renewcommand*\nompostamble{\end{multicols}}
+	\renewcommand*\nompostamble{\end{multicols}}
 
 \newcommand{\subject}[1]{\renewcommand{\subject}{#1}}
 
+% ---------------------------------------------------------------------------- %
 \usepackage{fancyhdr}
 
 \pagestyle{fancy}
@@ -93,15 +97,15 @@
 
 \makeatletter
 \renewcommand\section{\@startsection {section}{1}{\z@}%
-           {18\p@ \@plus 6\p@ \@minus 3\p@}%
-           {9\p@ \@plus 6\p@ \@minus 3\p@}%
-           {\normalsize\bfseries\boldmath}}
+	{18\p@ \@plus 6\p@ \@minus 3\p@}%
+	{9\p@ \@plus 6\p@ \@minus 3\p@}%
+	{\normalsize\bfseries\boldmath}}
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
-           {12\p@ \@plus 6\p@ \@minus 3\p@}%
-           {3\p@ \@plus 6\p@ \@minus 3\p@}%
-           {\normalfont\normalsize\itshape}}
+	{12\p@ \@plus 6\p@ \@minus 3\p@}%
+	{3\p@ \@plus 6\p@ \@minus 3\p@}%
+	{\normalfont\normalsize\itshape}}
 \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
-           {12\p@ \@plus 6\p@ \@minus 3\p@}%
-           {\p@}%
-           {\normalfont\normalsize\itshape}}
+	{12\p@ \@plus 6\p@ \@minus 3\p@}%
+	{\p@}%
+	{\normalfont\normalsize\itshape}}
 \makeatother
