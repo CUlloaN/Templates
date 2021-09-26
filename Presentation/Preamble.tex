@@ -4,6 +4,7 @@
 \usepackage{amssymb,amstext,amsmath,mathtools}
 \usepackage{textcomp}
 \usepackage{bm,bbm}
+\usepackage{cprotect}
 
 \usepackage{csquotes}
 
@@ -17,6 +18,7 @@
 \usepackage{subcaption}
 \setlength\belowcaptionskip{1pt}
 \setlength\abovecaptionskip{1pt}
+\captionsetup[figure]{subrefformat=parens}
 
 %------------------------------------------------------------------------------%
 \usepackage{multicol,multirow}
@@ -126,15 +128,15 @@
 \makeatletter
 	\setbeamertemplate{frametitle}{
 		\ifx\insertframesubtitle\@empty
+			\setbeamerfont{frametitle}{size=\fontsize{22}{0}}
+			\usebeamerfont{frametitle}\usebeamercolor[fg]{frametitle}
+			\vspace*{8pt}\hspace*{45pt}\insertframetitle\vspace*{3pt}
+		\else
 			\setbeamerfont{frametitle}{size=\fontsize{18}{0}}
 			\usebeamerfont{frametitle}\usebeamercolor[fg]{frametitle}
-			\vspace*{15pt}\hspace*{23mm}\insertframetitle\\
-		\else
-			\setbeamerfont{frametitle}{size=\fontsize{14}{0}}
-			\usebeamerfont{frametitle}\usebeamercolor[fg]{frametitle}
-			\vspace*{15pt}\hspace*{23mm}\insertframetitle\\
+			\vspace*{8pt}\hspace*{45pt}\insertframetitle\\
 			\usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}
-			\vspace*{-1pt}\hspace*{23mm}\insertframesubtitle\vspace*{-8pt}
+			\vspace*{-1pt}\hspace*{45pt}\insertframesubtitle\vspace*{-5pt}
 		\fi
 	}
 \makeatother
