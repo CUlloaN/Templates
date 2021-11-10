@@ -1,15 +1,13 @@
 %------------------------------------------------------------------------------%
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
-\usepackage{amssymb,amstext,amsmath,mathtools}
+\usepackage{amssymb,amsmath,mathtools}
 \usepackage{textcomp}
 \usepackage{bm,bbm}
-\usepackage{cprotect}
-
-\usepackage{csquotes}
+\usepackage{cprotect}		% For use verbatin environment
 
 \usepackage{siunitx}
-\sisetup{input-decimal-markers={.},group-separator={\,}}
+\sisetup{input-decimal-markers={.},group-separator={\,} ,per-mode=symbol}
 
 %------------------------------------------------------------------------------%
 \usepackage{graphicx}
@@ -26,6 +24,7 @@
 \usepackage{makecell,tabularx}
 
 %------------------------------------------------------------------------------%
+\usepackage{csquotes}
 \usepackage[backend=biber,
 			style=authoryear,
 			natbib=false,

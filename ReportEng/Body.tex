@@ -62,7 +62,7 @@
                 1\textsuperscript{nd} (Vector) & \underbar{$X$}, $\bm{X}$, $X_i$ & \underbar{$x$}, $\bm{x}$, $x_i$ \\
                 2\textsuperscript{nd} & \doubleunderline{$P$}, $\bm{P}$, $P_{ij}$ & \doubleunderline{$\sigma$}, $\bm{\sigma}$, $\sigma_{ij}$ \\
                 3\textsuperscript{rd} & \multicolumn{2}{c}{$\mathcal{E}$, $E_{ijk}$} \\
-                4\textsuperscript{th} & $\bm{\mathbb{C}}$, $C_{ijkl}$ & $\mathbbm{c}$, $c_{ijkl}$ \\\bottomrule
+                4\textsuperscript{th} & $\bm{\mathsf{C}}$, $C_{ijkl}$ & $\bm{\mathsf{c}}$, $c_{ijkl}$ \\\bottomrule
             \end{tabular}
             \label{tab:generalnotation}
         \end{table}
@@ -74,12 +74,12 @@
         \nomenclature{$\partial\Omega$}{Boundary of a closed region $\Omega$}
 
 \subsection{Results and analysis}
-    For units of measure, use the package \verb|siunitx| of \LaTeX. For example, \SI{1.0}{\kilogram} or \SI{100}{\giga\pascal}.
+    For units of measure, use the \verb|siunitx| package. For example, \qty{1.0}{\kilogram} or \qty{100}{\giga\pascal} or $\rho = \qty{1490}{\kilogram\per\meter\cubed}$.
     The tables, like the images, must be cited in the text and must follow the format shown in the \Cref{tab:CLTresults}.
 
         \begin{table}[htbp]
             \centering
-            \caption{Results of CLT buckling test, obtained from \textcite{pinaNumericalStudyElastic2019} }
+            \caption{Results of CLT buckling test, obtained from \textcite{pinaNumericalStudyElastic2019}.}
             \begin{tabular}{c
                             S[table-format=3.0]
                             S[table-format=2.0]
@@ -90,13 +90,13 @@
                             S[table-format=2.2]}
             \toprule
                 {\multirow{2}{*}{\makecell{Test\\number}}}
-                    & {\multirow{2}{*}{\makecell{Width\\/\si{\milli\meter}}}} 
-                        & {\multirow{2}{*}{\makecell{Total thickness\\/\si{\milli\meter}}}}
-                            & {\multirow{2}{*}{\makecell{Height\\/\si{\milli\meter}}}}
-                                & {\multirow{2}{*}{\makecell{$E$\\/\si{\giga\pascal}}}}
+                    & {\multirow{2}{*}{\makecell{Width\\/\unit{\milli\meter}}}} 
+                        & {\multirow{2}{*}{\makecell{Total thickness\\/\unit{\milli\meter}}}}
+                            & {\multirow{2}{*}{\makecell{Height\\/\unit{\milli\meter}}}}
+                                & {\multirow{2}{*}{\makecell{$E$\\/\unit{\giga\pascal}}}}
                                     & {\multirow{2}{*}{\makecell{$\lambda_{eff}$}}}
-                                        & {\multirow{2}{*}{\makecell{Critical load\\/\si{\kilo\newton}}}}
-                                            & {\multirow{2}{*}{\makecell{Critical stress\\/\si{\mega\pascal}}}} \\
+                                        & {\multirow{2}{*}{\makecell{Critical load\\/\unit{\kilo\newton}}}}
+                                            & {\multirow{2}{*}{\makecell{Critical stress\\/\unit{\mega\pascal}}}} \\
                 &&&&&&&\\\midrule
             1.a   & 150   & 45    & 1000  & 11.65 & 87.8  & 71.85 & 10.64 \\
             1.b   & 150   & 45    & 1000  & 11.65 & 87.8  & 95.31 & 14.12 \\

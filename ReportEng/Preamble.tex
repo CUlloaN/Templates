@@ -10,17 +10,15 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
-\usepackage{amssymb,amstext,amsmath,mathtools}
+\usepackage{amssymb,amsmath,mathtools}
 \usepackage{textcomp}
 \usepackage{bm,bbm}
 
 \usepackage{authblk}
 \renewcommand{\Affilfont}{\itshape\small}
 
-\usepackage{csquotes}
-
 \usepackage{siunitx}
-\sisetup{input-decimal-markers={.},group-separator={\,}}
+\sisetup{input-decimal-markers={.},group-separator={\,} ,per-mode=symbol}
 
 \usepackage{enumitem}
 \setlist{nosep}
@@ -42,6 +40,7 @@
 \usepackage{tabularx}
 
 % ---------------------------------------------------------------------------- %
+\usepackage{csquotes}
 \usepackage[backend=bibtex,
 			style=authoryear,
 			natbib=true,
@@ -52,11 +51,11 @@
 			sorting=nyt,
 			giveninits=true,
 			uniquename=false,
-			maxbibnames=15,
+			maxbibnames=2,
 			maxcitenames=2,
 			dashed=false,
 			]{biblatex}
-\bibliography{bibfile}
+\addbibresource{bibfile.bib}
 \renewcommand*{\bibfont}{\footnotesize}
 
 % ---------------------------------------------------------------------------- %
